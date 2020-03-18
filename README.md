@@ -10,3 +10,5 @@ New web server that designed to manage rosters online
 * **It uses its own protocol for communication between browsers and server**
 * No external dependency
 * Password authentication for team leaders
+* Takes data backup on every update
+* Detailed server log
