@@ -1,0 +1,181 @@
+<html>
+
+<head>
+
+<title>Roster Plan</title>
+
+<style>
+body
+{
+font-family: arial,sans-serif;
+font-size: small;
+}
+
+table
+{
+font-family: arial,sans-serif;
+font-size: small;
+font-weight: normal;
+border-collapse: collapse;
+background-color: white;
+}
+td
+{
+border-style: solid;
+border-color: gray;
+border-width: 1px;
+padding: 8px;
+text-align: center;
+cursor: pointer;
+}
+tr:hover
+{
+color: blue;
+background-color: lightgray;
+}
+.ogsp:hover, .cogp:hover, .ogss:hover, .cogs:hover, .airpacp:hover, .aircomp:hover, .airpacs:hover, .aircoms:hover, .gsip:hover, .emapp:hover, .gsis:hover, .emaps:hover, .cdwp:hover, .capricornp:hover, .cdws:hover, .capricorns:hover, .etlp:hover, .etls:hover
+{
+background-color: lightgray;
+}
+.ogsp:active, .cogp:active, .ogss:active, .cogs:active, .airpacp:active, .aircomp:active, .airpacs:active, .aircoms:active, .gsip:active, .emapp:active, .gsis:active, .emaps:active, .cdwp:active, .capricornp:active, .cdws:active, .capricorns:active, .etlp:active, .etls:active, .ds:active, .de:active
+{
+background-color: whiteSmoke;
+}
+.t
+{
+background-color: gray;
+color: white;
+}
+.h1p, .h1s, .h2p, .h2s, .h3p, .h3s, .h4p, .h4s, .h5p, .h5s
+{color: black;}
+.sd{background-color: lightgray;color: black;}
+.ogsp, .cogp, .h1p
+{
+background-color: rgba(192, 223, 251,1);
+}
+.ogss, .cogs, .h1s
+{
+background-color: rgba(213,235,255,1);
+}
+.airpacp, .aircomp, .h2p
+{
+background-color: rgba(247,216,174,1);
+}
+.airpacs, .aircoms, .h2s
+{
+background-color: antiquewhite;
+}
+.gsip, .emapp, .h3p
+{
+background-color: rgba(245,186,245,1);
+}
+.gsis, .emaps, .h3s
+{
+background-color: rgba(243,210,243,1);
+}
+.cdwp, .capricornp, .h4p
+{background-color: aquamarine;}
+.cdws, .capricorns, .h4s
+{background-color: rgba(207,253,237,1);}
+.etlp, .h5p
+{background-color: pink;}
+.etls, .h5s
+{background-color: rgba(245,213,218,1);}
+
+#perselect, #dt
+{padding-left: 50px;
+padding-right: 50px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+button
+{padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+
+
+}
+#layer
+{
+position: fixed;
+height: 100%;
+width: 100%;
+top: 0px;
+left: 0px;
+background-color: rgba(255,255,255,0.8);
+visibility: hidden;
+}
+#application, #dateapp
+{position: fixed;
+background-color: black;
+padding-top: 30px;
+padding-bottom: 30px;
+width: 100%;
+top: 30%;
+left: 0px;
+text-align: center;
+visibility: hidden;
+}
+.publish
+{
+background-color: blue;
+border-style: solid;
+border-width: 1px;
+border-color: white;
+color: white;
+cursor: pointer;
+position: fixed;
+top: 5px;
+right: 5px;
+}
+.publish:hover
+{
+background-color: lime;
+color: black;
+border-color: blue;
+}
+.publish:active
+{background-color: blue;}
+</style>
+
+
+<script>
+var globals={0 : "yellow",1 : "fuchsia",2 : "lime",3 : "red",4 : "brown",i : 0};
+
+var source;
+
+
+
+
+
+function handleclick(event)
+{
+var source = event.target || event.srcElement;
+document.getElementById("board").innerHTML=document.getElementById("board").innerHTML.replace(new RegExp(source.innerHTML, 'g'),"<p style=\"background-color: "+globals[globals["i"]]+"\">"+source.innerHTML+"</p>");
+globals["i"]+=1;
+globals["i"]%=5;
+assignhandlers();
+}
+
+function assignhandlers()
+{
+	var al=document.querySelectorAll(".ogsp, .ogss, .airpacp, .airpacs, .gsip, .gsis, .cdwp, .cdws, .etlp, .etls, .cogp, .cogs, .emapp, .emaps, .aircomp, .aircoms, .capricornp, .capricorns");
+
+	var max	=al.length; 
+	for (var i=0;i < max; i++)
+	{
+		al[i].addEventListener("click", handleclick);
+	}
+
+}
+
+</script>
+
+</head>
+
+
+<body>
+<div align=right width=100%><a href="/Pages/SupportPlan_BCL.html" align="right">Team lead login</a></div>
+<h2 align="center">Roster Plan</h2>
+<table id="board">

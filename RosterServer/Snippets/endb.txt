@@ -1,0 +1,48 @@
+
+</table>
+
+<button onclick="publishplan()" class="publish">Produce & Publish Plan</button>
+<a href="/Pages/SupportPlan.html" class="logout">Logout</a>
+
+<br>
+
+<button onclick="document.getElementById('new').style.visibility=document.getElementById('new').style.visibility=='visible'?'hidden':'visible'">Add plan for next week</button>
+<table id="new">
+<tr>
+	<td colspan=2 class="t"><b>Add plan</b></td>	<td colspan=2 class="h1p"><b>Team 1</b></td>	<td colspan=2 class="h2p"><b>Team 2</b></td>	<td colspan=2 class="h3p"><b>Team 3</b></td>	<td colspan=2 class="h4p"><b>Team 4</b></td>	<td colspan=2 class="h5p"><b>Team 5</b></td>	<td colspan=2 class="h1p"><b>Team 6</b></td>	<td colspan=2 class="h3p"><b>Team 7</b></td>	<td colspan=2 class="h2p"><b>Team 8</b></td>	<td colspan=2 class="h4p"><b>Team 9</b></td>
+</tr>
+
+<tr>
+	<td class="sd"><b>StartDate</b></td>	<td class="sd"><b>EndDate</b></td>	<td class="h1p"><b>Primary</b></td>	<td class="h1s"><b>Secondary</b></td>	<td class="h2p"><b>Primary</b></td>	<td class="h2s"><b>Secondary</b></td>	<td class="h3p"><b>Primary</b></td>	<td class="h3s"><b>Secondary</b></td>	<td class="h4p"><b>Primary</b></td>	<td class="h4s"><b>Secondary</b></td>	<td class="h5p"><b>Primary</b></td>	<td class="h5s"><b>Secondary</b></td>	<td class="h1p"><b>Primary</b></td>	<td class="h1s"><b>Secondary</b></td>	<td class="h3p"><b>Primary</b></td>	<td class="h3s"><b>Secondary</b></td>	<td class="h2p"><b>Primary</b></td>	<td class="h2s"><b>Secondary</b></td>	<td class="h4p"><b>Primary</b></td>	<td class="h4s"><b>Secondary</b></td>
+</tr>
+<tr id="newrow">
+	<td class="ds">StartDate</td>	<td class="de">EndDate</td>	<td class="ogsp">Unassingned</td>	<td class="ogss">Unassingned</td>	<td class="airpacp">Unassingned</td>	<td class="airpacs">Unassingned</td>	<td class="gsip">Unassingned</td>	<td class="gsis">Unassingned</td>	<td class="cdwp">Unassingned</td>	<td class="cdws">Unassingned</td>	<td class="etlp">Unassingned</td>	<td class="etls">Unassingned</td>	<td class="cogp">Unassingned</td>	<td class="cogs">Unassingned</td>	<td class="emapp">Unassingned</td>	<td class="emaps">Unassingned</td>	<td class="aircomp">Unassingned</td>	<td class="aircoms">Unassingned</td>	<td class="capricornp">Unassingned</td>	<td class="capricorns">Unassingned</td>
+</tr>
+<tr>
+<td colspan=22><button onclick="addnewrow()">Add</button></td>
+</tr>
+</table>
+
+
+
+<div id="application">
+<select id="perselect"><option>Employee 1</option><option>Employee 2</option><option>Employee 3</option><option>Employee 4</option><option>Employee 5</option></select>
+&nbsp&nbsp&nbsp<button onclick="assignbutton()">Assign</button>
+<button onclick="cancelbutton()">Cancel</button>
+</div>
+
+<div id="dateapp">
+<input type="date" id="dt"></input>
+&nbsp&nbsp&nbsp<button onclick="dateassignbutton()">&nbsp&nbspOK&nbsp&nbsp</button>
+<button onclick="datecancelbutton()">Cancel</button>
+</div>
+
+
+</body>
+
+<script>
+assignhandlers();
+
+</script>
+
+</html>
