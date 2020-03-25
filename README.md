@@ -13,5 +13,5 @@ New web server that designed to manage rosters online
 * Takes data backup on every update
 * Detailed server log
 
-### Demo
+## Demo
 ![](demo.gif)
