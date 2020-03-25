@@ -12,4 +12,4 @@ New web server that designed to manage rosters online
 * Password authentication for team leaders
 * Takes data backup on every update
 * Detailed server log
-![](RosterAppUse.gif)
+![](demo.gif)
